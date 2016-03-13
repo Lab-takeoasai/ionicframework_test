@@ -4,15 +4,15 @@ angular.module('todo.services', [])
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
-  var todos = [
+  let todos = [
     { title: 'Collect coins' },
     { title: 'Eat mushrooms' },
     { title: 'Get higeeeh enough to grab the flag' },
-    { title: '日本語 the Princess' }
+    { title: '日本e語 the Princess' }
   ];
 
   return {
-    all: function() {
+    all: () => {
       return todos;
     }
   };
