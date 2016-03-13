@@ -14,6 +14,9 @@ angular.module('todo.services', [])
   return {
     all: () => {
       return todos;
+    },
+    create: () => {
+      todos.push({title: 'new task'})
     }
   };
 });

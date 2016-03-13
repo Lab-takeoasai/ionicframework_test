@@ -9,6 +9,9 @@ angular.module('todo.services', []).factory('Todos', function () {
   return {
     all: function all() {
       return todos;
+    },
+    create: function create() {
+      todos.push({ title: 'new task' });
     }
   };
 });
