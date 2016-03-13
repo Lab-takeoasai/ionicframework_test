@@ -6,17 +6,28 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
+var typescript = require('gulp-typescript');
 
 var paths = {
   sass: ['./scss/**/*.scss'],
-  typescript: ['./src/*.js']
+  typescript: ['./src/*.ts']
 };
+
+var typescriptProject = typescript.createProject({
+  target: "ES5",
+  removeComments: true,
+  sortOutput: true
+});
 
 gulp.task('default', ['sass']);
 
 gulp.task('typescript', function(done) {
   gulp.src(paths.typescript)
-    .on('end', done)
+    .pipe(typescript(typescriptProject))
+    .js
+    .pipe(concat(main.js))
+    .pipe(gulp.dest('./www./js/'))
+    .on('end', done);
 });
 
 gulp.task('sass', function(done) {
