@@ -10,15 +10,23 @@ var babel = require("gulp-babel");
 
 var paths = {
   sass: ['./scss/**/*.scss'],
-  controllers: ['./src/controllers/*.js']
+  controllers: ['./src/controllers/*.js'],
+  models: ['./src/models/*.js']
 };
 
-gulp.task('default', ['sass']);
+gulp.task('default', ['sass', 'controllers', 'models']);
 
-gulp.task('es6', function(done) {
+gulp.task('controllers', function(done) {
   gulp.src(paths.controllers)
     .pipe(babel())
     .pipe(concat("controllers.js"))
+    .pipe(gulp.dest("./www/js/"))
+    .on('end', done)
+});
+gulp.task('models', function(done) {
+  gulp.src(paths.models)
+    .pipe(babel())
+    .pipe(concat("models.js"))
     .pipe(gulp.dest("./www/js/"))
     .on('end', done)
 });
@@ -38,7 +46,8 @@ gulp.task('sass', function(done) {
 
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
-  gulp.watch(paths.controllers, ['es6']);
+  gulp.watch(paths.controllers, ['controllers']);
+  gulp.watch(paths.models, ['models']);
 });
 
 gulp.task('install', ['git-check'], function() {
