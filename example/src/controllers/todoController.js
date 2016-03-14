@@ -13,7 +13,7 @@ angular.module('todo.controller', ['ionic'])
   $scope.newProject = () => {
     const projectName = prompt('Project name');
     if (projectName) {
-      // Projects.create(projectName);
+      Projects.create(projectName);
     }
     $ionicSideMenuDelegate.toggleLeft(false);
   };
@@ -27,7 +27,7 @@ angular.module('todo.controller', ['ionic'])
     animation: 'slide-in-up'
   });
   $scope.createTask = (task) => {
-    Todos.create(task.title);
+    Todos.create(task.title, task.project);
 
     $scope.taskModal.hide();
     task.title = "";

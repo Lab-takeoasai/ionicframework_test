@@ -13,6 +13,16 @@
           <input type="text" placeholder="What do you need to do?" ng-model="task.title">
         </label>
       </div>
+      <div class="list">
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Project
+          </div>
+          <select ng-model="task.project">
+            <option ng-repeat="project in projects">{{project.name}}</option>
+          </select>
+        </label>
+      </div>
       <div class="padding">
         <button type="submit" class="button button-block button-positive">Create Task</button>
       </div>

@@ -5,18 +5,18 @@ angular.module('todo.services', [])
 
   // Some fake testing data
   let todos = [
-    { title: 'Collect coins' },
-    { title: 'Eat mushrooms' },
-    { title: 'Get higeeeh enough to grab the flag' },
-    { title: '日本語 the Princess' }
+    { title: 'Collect coins', project: 'test' },
+    { title: 'Eat mushrooms', project: 'test' },
+    { title: 'Get higeeeh enough to grab the flag', project: 'test' },
+    { title: '日本語 the Princess', project: 'test' }
   ];
 
   return {
     all: () => {
       return todos;
     },
-    create: (str) => {
-      todos.push({title: str})
+    create: (str, proj) => {
+      todos.push({title: str, project: proj})
     }
   };
 });
