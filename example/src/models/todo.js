@@ -8,15 +8,15 @@ angular.module('todo.services', [])
     { title: 'Collect coins' },
     { title: 'Eat mushrooms' },
     { title: 'Get higeeeh enough to grab the flag' },
-    { title: '日本e語 the Princess' }
+    { title: '日本語 the Princess' }
   ];
 
   return {
     all: () => {
       return todos;
     },
-    create: () => {
-      todos.push({title: 'new task'})
+    create: (str) => {
+      todos.push({title: str})
     }
   };
 });
