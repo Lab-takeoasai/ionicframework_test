@@ -6,7 +6,7 @@ angular.module('todo.controller', ['ionic']).controller('TodoCtrl', function ($s
 
   // Projects
   $scope.toggleProjects = function () {
-    $ionicSideMenuDelegate.toggleLeft(!$ionicSideMenuDelegate.isOpenLeft());
+    $ionicSideMenuDelegate.toggleLeft();
   };
   $scope.newProject = function () {
     var projectName = prompt('Project name');
