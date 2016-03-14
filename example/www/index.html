@@ -29,6 +29,9 @@
       <!-- Center content -->
       <ion-side-menu-content>
         <ion-header-bar class="bar-dark">
+          <button class="button button-icon" ng-click="toggleProjects()">
+            <i class="icon ion-navicon"></i>
+          </button>
           <h1 class="title">Todo</h1>
           <!-- New Task button-->
           <button class="button button-icon" ng-click="newTask()">
@@ -48,8 +51,16 @@
       <!-- Left menu -->
       <ion-side-menu side="left">
         <ion-header-bar class="bar-dark">
-          <h1 class="title">Projects</h1>
+          <h1 class="title">Projects {{projects.length}}</h1>
+          <button class="button button-icon ion-plus" ng-click="newProject()">
         </ion-header-bar>
+        <ion-content scroll="false">
+          <ion-list>
+            <ion-item ng-repeat="project in projects">
+              {{project.name}}
+            </ion-item>
+          </ion-list>
+        </ion-content>
       </ion-side-menu>
 
     </ion-side-menus>
