@@ -41,8 +41,14 @@
         <ion-content>
           <!-- our list and list items -->
           <ion-list>
-            <ion-item ng-repeat="task in tasks">
+            <ion-item class="item item-remove-animate" ng-repeat="task in tasks">
               {{task.title}}, {{task.project}}
+              <ion-option-button class="button-calm" ng-click="editTask(task)">
+                Edit
+              </ion-option-button>
+              <ion-option-button class="button-assertive" ng-click="deleteTask(task)">
+                Delete
+              </ion-option-button>
             </ion-item>
           </ion-list>
         </ion-content>

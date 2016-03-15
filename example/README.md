@@ -5,12 +5,14 @@
 
 # TODO:
 
-+ Angularについて学ぶ
- - factory とか
++ *Angularについて学ぶ*
+ - factory, *directive* とか
 + Ionicについても
 + Codovaも
  - APIがわからんので
  - Tutorialやっとく
+
+# Angular
 
 
 Button tag閉じ忘れてた！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！< 5hハマる
@@ -25,3 +27,7 @@ Button tag閉じ忘れてた！！！！！！！！！！！！！！！！！�
 
 # tableView
 item-remove-animateでanimation
+
++ editとcreateのviewの共通化
++ class(CSS)で見た目をいじる
++ nifty mbaaあるのでこれ使うテスト

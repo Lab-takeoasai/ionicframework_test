@@ -11,12 +11,24 @@ angular.module('todo.services', [])
     { title: '日本語 the Princess', project: 'test' }
   ];
 
+  const save = () => {
+
+  };
+
   return {
     all: () => {
       return todos;
     },
+    delete: (todo) => {
+      const i = todos.indexOf(todo);
+      if (i !== -1) {
+        todos.splice(i, 1);
+      }
+      save();
+    },
     create: (str, proj) => {
       todos.push({title: str, project: proj})
+      save();
     }
   };
 });

@@ -35,6 +35,13 @@ angular.module('todo.controller', ['ionic'])
     scope: $scope,
     animation: 'slide-in-up'
   });
+  $scope.deleteTask = (task) => {
+    Todos.delete(task);
+  };
+  $scope.editTask = (task) => {
+    $scope.taskModal.show();
+    $scope.task = task; // TODO: this is a new create task
+  };
   $scope.createTask = (task) => {
     Todos.create(task.title, task.project);
 

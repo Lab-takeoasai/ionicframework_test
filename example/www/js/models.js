@@ -58,12 +58,22 @@ angular.module('todo.services', []).factory('Todos', function () {
   // Some fake testing data
   var todos = [{ title: 'Collect coins', project: 'test' }, { title: 'Eat mushrooms', project: 'test' }, { title: 'Get higeeeh enough to grab the flag', project: 'test' }, { title: '日本語 the Princess', project: 'test' }];
 
+  var save = function save() {};
+
   return {
     all: function all() {
       return todos;
     },
+    delete: function _delete(todo) {
+      var i = todos.indexOf(todo);
+      if (i !== -1) {
+        todos.splice(i, 1);
+      }
+      save();
+    },
     create: function create(str, proj) {
       todos.push({ title: str, project: proj });
+      save();
     }
   };
 });
