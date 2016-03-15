@@ -22,3 +22,6 @@ Button tag閉じ忘れてた！！！！！！！！！！！！！！！！！�
 # atom:
 + ionic-preview
  - 面白いけどpromptでないしconsoleもない. 残念
+
+# tableView
+item-remove-animateでanimation

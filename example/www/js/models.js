@@ -9,19 +9,43 @@ angular.module('project.services', []).factory('Projects', function () {
     projects = angular.fromJson(projectStr);
   }
 
+  var save = function save() {
+    window.localStorage['projects'] = angular.toJson(projects);
+  };
+  var contains = function contains(name) {
+    for (var n in projects) {
+      var project = projects[n];
+      if (name === project.name) {
+        return n;
+      }
+    }
+    return -1;
+  };
+
   return {
     all: function all() {
       return projects;
     },
-    create: function create(t) {
-      projects.push({ name: t });
-      window.localStorage['projects'] = angular.toJson(projects);
+    create: function create(newName) {
+      if (contains(newName) === -1) {
+        // the same name is not allowed
+        projects.push({ name: newName });
+      }
+      save();
     },
-    delete: function _delete(t) {
-      var i = projects.indexOf(t);
+    edit: function edit(proj, newName) {
+      var i = contains(proj.name);
+      if (i != -1) {
+        projects[i].name = newName;
+      }
+      save();
+    },
+    delete: function _delete(proj) {
+      var i = contains(proj.name);
       if (i != -1) {
         projects.splice(i, 1);
       }
+      save();
     }
 
   };

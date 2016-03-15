@@ -18,11 +18,13 @@ angular.module('todo.controller', ['ionic'])
     $ionicSideMenuDelegate.toggleLeft(false);
   };
   $scope.editProject = (proj) => {
-    console.log(proj);
+    const projectName = prompt('Project name');
+    if (projectName) {
+      Projects.edit(proj, projectName);
+    }
   };
   $scope.deleteProject = (proj) => {
-    console.log(proj);
-    Projects.delete(proj); // TODO: animation
+    Projects.delete(proj);
   };
 
   // Todos
