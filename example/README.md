@@ -58,3 +58,6 @@ item-remove-animateでanimation
 + editとcreateのviewの共通化
 + class(CSS)で見た目をいじる
 + nifty mbaaあるのでこれ使うテスト
+
+ionic-content とか全部angularjsのdirective
+eslintがdefault持たないのが辛い

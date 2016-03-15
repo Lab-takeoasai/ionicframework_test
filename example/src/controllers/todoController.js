@@ -4,8 +4,6 @@ angular.module('todo.controller', ['ionic'])
   $scope.projects = Projects.all();
   $scope.tasks = Todos.all();
 
-
-
   // Projects
   $scope.toggleProjects = () => {
     $ionicSideMenuDelegate.toggleLeft();
@@ -46,7 +44,7 @@ angular.module('todo.controller', ['ionic'])
     Todos.create(task.title, task.project);
 
     $scope.taskModal.hide();
-    task.title = "";
+    task.title = '';
   };
   $scope.newTask = () => {
     $scope.taskModal.show();

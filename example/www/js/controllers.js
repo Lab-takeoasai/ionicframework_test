@@ -44,7 +44,7 @@ angular.module('todo.controller', ['ionic']).controller('TodoCtrl', function ($s
     Todos.create(task.title, task.project);
 
     $scope.taskModal.hide();
-    task.title = "";
+    task.title = '';
   };
   $scope.newTask = function () {
     $scope.taskModal.show();

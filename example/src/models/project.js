@@ -28,7 +28,7 @@ angular.module('project.services', [])
     },
     create: (newName) => {
       if (contains(newName) === -1) { // the same name is not allowed
-        projects.push({name: newName})
+        projects.push({name: newName});
       }
       save();
     },

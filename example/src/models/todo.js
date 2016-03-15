@@ -27,7 +27,7 @@ angular.module('todo.services', [])
       save();
     },
     create: (str, proj) => {
-      todos.push({title: str, project: proj})
+      todos.push({title: str, project: proj});
       save();
     }
   };
