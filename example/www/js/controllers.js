@@ -15,6 +15,13 @@ angular.module('todo.controller', ['ionic']).controller('TodoCtrl', function ($s
     }
     $ionicSideMenuDelegate.toggleLeft(false);
   };
+  $scope.editProject = function (proj) {
+    console.log(proj);
+  };
+  $scope.deleteProject = function (proj) {
+    console.log(proj);
+    Projects.delete(proj); // TODO: animation
+  };
 
   // Todos
   // Create and load the Modal

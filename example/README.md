@@ -15,7 +15,10 @@
 
 Button tag閉じ忘れてた！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！< 5hハマる
 
+# How to clone
++ git clone URL
++ npm install
 
 # atom:
 + ionic-preview
- - 面白いけどpromptでないしconsoleもない
+ - 面白いけどpromptでないしconsoleもない. 残念

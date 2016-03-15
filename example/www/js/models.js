@@ -14,8 +14,14 @@ angular.module('project.services', []).factory('Projects', function () {
       return projects;
     },
     create: function create(t) {
-      projects.push({ name: t, tasks: [] });
+      projects.push({ name: t });
       window.localStorage['projects'] = angular.toJson(projects);
+    },
+    delete: function _delete(t) {
+      var i = projects.indexOf(t);
+      if (i != -1) {
+        projects.splice(i, 1);
+      }
     }
 
   };
