@@ -4,8 +4,6 @@
     "node": true
   },
   "rules": {
-    "no-reserved-keys": 2,
-
     "no-console": 1,
     "no-constant-condition": 1,
     "no-debugger": 1,
