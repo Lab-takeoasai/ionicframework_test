@@ -22,6 +22,7 @@
     <script src="./js/app.js"></script>
     <script src="./js/controllers.js"></script>
     <script src="./js/models.js"></script>
+    <script src="./js/directives.js"></script>
   </head>
   <body ng-app="todo" ng-controller="TodoCtrl">
     <ion-side-menus>
@@ -41,6 +42,9 @@
         <ion-content>
           <!-- our list and list items -->
           <ion-list>
+            <ion-item>
+              <div first_directive></div>
+            </ion-item>
             <ion-item class="item item-remove-animate" ng-repeat="task in tasks">
               {{task.title}}, {{task.project}}
               <ion-option-button class="button-calm" ng-click="editTask(task)">
