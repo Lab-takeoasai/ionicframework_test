@@ -3,6 +3,7 @@ node_js:
   - 5
 before_script:
   - cd example
+  - npm install -g karma-cli
   - npm install -g gulp
   - npm install
 script: gulp
