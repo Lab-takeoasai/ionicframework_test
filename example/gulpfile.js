@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var bower = require('bower');
@@ -20,23 +22,23 @@ gulp.task('default', ['sass', 'controllers', 'models', 'directives']);
 gulp.task('controllers', function(done) {
   gulp.src(paths.controllers)
     .pipe(babel())
-    .pipe(concat("controllers.js"))
-    .pipe(gulp.dest("./www/js/"))
-    .on('end', done)
+    .pipe(concat('controllers.js'))
+    .pipe(gulp.dest('./www/js/'))
+    .on('end', done);
 });
 gulp.task('models', function(done) {
   gulp.src(paths.models)
     .pipe(babel())
-    .pipe(concat("models.js"))
-    .pipe(gulp.dest("./www/js/"))
-    .on('end', done)
+    .pipe(concat('models.js'))
+    .pipe(gulp.dest('./www/js/'))
+    .on('end', done);
 });
 gulp.task('directives', function(done) {
   gulp.src(paths.directives)
     .pipe(babel())
-    .pipe(concat("directives.js"))
-    .pipe(gulp.dest("./www/js/"))
-    .on('end', done)
+    .pipe(concat('directives.js'))
+    .pipe(gulp.dest('./www/js/'))
+    .on('end', done);
 });
 
 gulp.task('sass', function(done) {
