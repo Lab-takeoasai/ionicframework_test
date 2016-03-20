@@ -27,7 +27,6 @@ angular.module('todo.controller', ['ionic']).controller('TodoCtrl', function ($s
   };
   $scope.selectProject = function (proj) {
     if ($scope.selectedProject === proj) {
-      $scope.selectedProj = false;
       $scope.selectedProject = null;
       $scope.tasks = Todos.all();
     } else {

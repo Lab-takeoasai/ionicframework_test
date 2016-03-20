@@ -66,8 +66,9 @@
         </ion-header-bar>
         <ion-content>
           <ion-list>
-            <ion-item class="item item-remove-animate" ng-repeat="project in projects" ng-click="selectProject(project)">
-              <ion-radio ng-model="selectedProj" ng-value="'{{project}}'">{{project.name}}</ion-radio>
+            <ion-item class="item item-remove-animate selected radio-content" ng-repeat="project in projects" ng-click="selectProject(project)">
+              {{project.name}}
+              <i class="radio-icon disable-pointer-events icon" ng-class="project === selectedProject ? 'ion-checkmark' : ''"></i>
               <ion-option-button class="button-calm" ng-click="editProject(project)">
                 Edit
               </ion-option-button>
