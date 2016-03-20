@@ -2,7 +2,6 @@ angular.module('project.services', [])
 
 .factory('Projects', function() {
 
-  // Might use a resource here that returns a JSON array
   const projectStr = window.localStorage['projects'];
   let projects = [];
   if (projectStr) {

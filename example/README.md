@@ -12,35 +12,6 @@
  - APIがわからんので
  - Tutorialやっとく
 
-# Angular
-$state
-$index
-$digest
-$route
-$watch
-angular expression
-two way data binding
-$scope
-$compiler
-$service
-$setViewValue
-transclude
-jqLite
-ng-maxlength
-custom filter
-ng-bind
-$location
-isolate scope
-$factory
-$cookie
-$broadcast
-dependency injection
-$provider
-$apply
-html5mode
-$on
-$q
-$resource
 
 Button tag閉じ忘れてた！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！< 5hハマる
 
@@ -54,6 +25,7 @@ Button tag閉じ忘れてた！！！！！！！！！！！！！！！！！�
 
 # tableView
 item-remove-animateでanimation
+CSS中身見る -> 少ない..
 
 + editとcreateのviewの共通化
 + class(CSS)で見た目をいじる

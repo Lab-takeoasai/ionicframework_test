@@ -2,7 +2,6 @@
 
 angular.module('project.services', []).factory('Projects', function () {
 
-  // Might use a resource here that returns a JSON array
   var projectStr = window.localStorage['projects'];
   var projects = [];
   if (projectStr) {
@@ -55,12 +54,22 @@ angular.module('project.services', []).factory('Projects', function () {
 angular.module('todo.services', []).factory('Todos', function () {
   // Might use a resource here that returns a JSON array
 
-  // Some fake testing data
-  var todos = [{ title: 'Collect coins', project: 'test' }, { title: 'Eat mushrooms', project: 'test' }, { title: 'Get higeeeh enough to grab the flag', project: 'test' }, { title: '日本語 the Princess', project: 'test' }];
+  var todoStr = window.localStorage['todos'];
+  var todos = [];
+  if (todoStr) {
+    todos = angular.fromJson(todoStr);
+  }
 
-  var save = function save() {};
+  function save() {
+    window.localStorage['todos'] = angular.toJson(todos);
+  };
 
   return {
+    search: function search(name) {
+      return todos.filter(function (item, index) {
+        return item.project === name;
+      });
+    },
     all: function all() {
       return todos;
     },

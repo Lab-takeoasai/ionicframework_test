@@ -3,6 +3,7 @@ angular.module('todo.controller', ['ionic'])
 .controller('TodoCtrl', function($scope, Todos, Projects, $ionicModal, $ionicSideMenuDelegate) {
   $scope.projects = Projects.all();
   $scope.tasks = Todos.all();
+  $scope.selectedProject = null;
 
   // Projects
   $scope.toggleProjects = () => {
@@ -23,6 +24,10 @@ angular.module('todo.controller', ['ionic'])
   };
   $scope.deleteProject = (proj) => {
     Projects.delete(proj);
+  };
+  $scope.selectProject = (proj) => {
+    $scope.selectedProject = proj;
+    $scope.tasks = Todos.search(proj.name);
   };
 
   // Todos
