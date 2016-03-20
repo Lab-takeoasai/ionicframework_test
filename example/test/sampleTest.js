@@ -1,6 +1,6 @@
 'use strict';
 
-describe('this test should be', () => {
+describe('this test should be', function() {
   /* mock doesn't work well
   beforeEach(module('todo.services'));
 
