@@ -67,7 +67,7 @@
         <ion-content>
           <ion-list>
             <ion-item class="item item-remove-animate" ng-repeat="project in projects" ng-click="selectProject(project)">
-              {{project.name}}
+              <ion-radio ng-model="selectedProj" ng-value="'{{project}}'">{{project.name}}</ion-radio>
               <ion-option-button class="button-calm" ng-click="editProject(project)">
                 Edit
               </ion-option-button>

@@ -26,8 +26,14 @@ angular.module('todo.controller', ['ionic']).controller('TodoCtrl', function ($s
     Projects.delete(proj);
   };
   $scope.selectProject = function (proj) {
-    $scope.selectedProject = proj;
-    $scope.tasks = Todos.search(proj.name);
+    if ($scope.selectedProject === proj) {
+      $scope.selectedProj = false;
+      $scope.selectedProject = null;
+      $scope.tasks = Todos.all();
+    } else {
+      $scope.selectedProject = proj;
+      $scope.tasks = Todos.search(proj.name);
+    }
   };
 
   // Todos

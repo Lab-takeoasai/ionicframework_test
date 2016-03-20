@@ -1,3 +1,3 @@
-# ionicframework_test
-
-npm install -g karma-cli
+travisのchromeは古いので、
+() => {}
+とかES6記法だとトラブる
