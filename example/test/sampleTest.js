@@ -10,7 +10,7 @@ describe('this test should be', function() {
     $controller = _$controller_;
   }));*/
 
-  it('always passed', () => {
+  it('always passed', function() {
     // var $scope = {};
     // var controller = $controller('PasswordController', { $scope: $scope });
 
