@@ -32,6 +32,14 @@ angular.module('todo.services', [])
     create: (str, proj) => {
       todos.push({title: str, project: proj});
       save();
+    },
+    edit: (todo, str, proj) => {
+      const i = todos.indexOf(todo);
+      if (i !== -1) {
+        todos[i].title = str;
+        todos[i].project = proj;
+      }
+      save();
     }
   };
 });

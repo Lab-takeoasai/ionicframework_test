@@ -1,0 +1,16 @@
+
+<div class="list">
+  <label class="item item-input">
+    <input type="text" placeholder="What do you need to do?" ng-model="task.title">
+  </label>
+</div>
+<div class="list">
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Project
+    </div>
+    <select ng-model="task.project">
+      <option ng-repeat="project in projects">{{project.name}}</option>
+    </select>
+  </label>
+</div>

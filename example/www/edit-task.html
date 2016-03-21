@@ -1,0 +1,15 @@
+<div class="modal">
+  <ion-header-bar class="bar-secondary">
+    <h1 class="title">Edit Task</h1>
+    <button class="button button-clear button-positive" ng-click="closeEditTask()">Cancel</button>
+  </ion-header-bar>
+
+  <ion-content>
+    <form ng-submit="updateTask(task)">
+      <task_edit></task_edit>
+      <div class="padding">
+        <button type="submit" class="button button-block button-positive">Update Task</button>
+      </div>
+    </form>
+  </ion-content>
+</div>

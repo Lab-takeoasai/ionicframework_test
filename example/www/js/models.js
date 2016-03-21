@@ -83,6 +83,14 @@ angular.module('todo.services', []).factory('Todos', function () {
     create: function create(str, proj) {
       todos.push({ title: str, project: proj });
       save();
+    },
+    edit: function edit(todo, str, proj) {
+      var i = todos.indexOf(todo);
+      if (i !== -1) {
+        todos[i].title = str;
+        todos[i].project = proj;
+      }
+      save();
     }
   };
 });
